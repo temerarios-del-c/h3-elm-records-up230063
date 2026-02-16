@@ -69,6 +69,7 @@ onlyStudents list =
         (\user ->
             if user.uType == "Student" then
                 user.name
+
             else
                 ""
         )
