@@ -3,6 +3,10 @@ module Helper exposing (..)
 import Html exposing (Html, div, h1, li, text, ul)
 
 
+
+-- SIMPLE EXERCISES
+
+
 add2 : Int -> Int -> Int
 add2 int1 int2 =
     int1 + int2
@@ -16,6 +20,10 @@ add3 int1 int2 int3 =
 calc : Int -> Int -> (Int -> Int -> Int) -> Int
 calc int1 int2 operator =
     operator int1 int2
+
+
+
+-- RECORDS 1
 
 
 type alias ProgrammingLanguage =
@@ -35,6 +43,10 @@ languages =
 languageNames : List ProgrammingLanguage -> List String
 languageNames list =
     List.map .name list
+
+
+
+-- RECORDS 2
 
 
 type alias User =
@@ -57,17 +69,23 @@ onlyStudents list =
         (\user ->
             if user.uType == "Student" then
                 user.name
-
             else
                 ""
         )
         list
-        { title = String
-        , releaseYear = Int
-        , available = Bool
-        , downloads = Int
-        , genres = List String
-        }
+
+
+
+-- ALIAS EXERCISE
+
+
+type alias Videogame =
+    { title : String
+    , releaseYear : Int
+    , available : Bool
+    , downloads : Int
+    , genres : List String
+    }
 
 
 games : List Videogame
@@ -90,6 +108,10 @@ games =
 getVideogameGenres : List Videogame -> List (List String)
 getVideogameGenres videogames =
     List.map .genres videogames
+
+
+
+-- HTML EXERCISE
 
 
 type alias Computer =
